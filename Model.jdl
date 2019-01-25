@@ -1,0 +1,166 @@
+
+/**
+ * 
+ * @author Pierre TAQUET
+ */
+//application {
+//  config {
+//  	applicationType monolith
+//  	baseName plantsworld
+//  	packageName com.olympp.jht
+//     //  	authenticationType jwt
+//  	buildTool maven
+//  	databaseType sql
+//  	devDatabaseType h2Disk
+//  	prodDatabaseType mysql
+//  	cacheProvider ehcache
+//  	enableHibernateCache true
+//     //  	clientFramework Angular6
+//     //  	useSass false
+//     //  	clientPackageManager npm
+//     //  	dtoSuffix DTO
+//     //  	jhiPrefix jhi
+//     //  	enableTranslation true
+//  	nativeLanguage fr
+//  	languages [fr, en]
+//     //  	enableSwaggerCodegen false
+//     //  	serviceDiscoveryType eureka
+//     //  	messageBroker false
+//     //  	searchEngine false
+//     //  	serverPort 8080
+//     //  	websocket false
+//     //  	skipClient false
+//     //  	skipServer false
+//     //  	skipUserManagement true
+//     //  	clientFramework angularX
+//  	     // Perhaps later 
+//  	     // applicationType microservice
+//  	     // serverPort 8082
+//  }
+//  entities *
+//}
+entity Plante {
+	phMin String pattern(/^\d{0,1}(,\d){0,1}$/)
+	phMax String pattern(/^\d{0,1}(,\d){0,1}$/)
+	tempMin Integer
+	tempMax Integer
+	description String
+}
+entity PlantCommonName {
+	commonName String
+}
+entity Recolte {
+}
+entity Floraison {
+}
+entity Mois {
+	mois String
+}
+entity ClassificationCronquist {
+}
+entity Ordre {
+	name String
+}
+entity Famille {
+	name String
+}
+entity Genre {
+	name String
+}
+entity Espece {
+	name String
+}
+entity InteractionPlantePlante {
+	notation String pattern(/^(-|0|\+){1}$/)
+	description String
+}
+entity Reference {
+	description String
+}
+entity Livre {
+	description String
+	isbn String
+	auteur String
+	page Integer
+}
+entity PageWeb {
+	description String
+	url String
+}
+relationship ManyToMany {
+	Plante to PlantCommonName
+}
+relationship OneToMany {
+	InteractionPlantePlante to Reference
+}
+relationship OneToOne {
+	Reference to Livre
+	Reference to PageWeb
+}
+relationship ManyToOne {
+	Plante{classificationCronquist required} to ClassificationCronquist
+}
+relationship ManyToOne {
+	// ClassificationCronquist
+	ClassificationCronquist{ordre(name)} to Ordre
+	ClassificationCronquist{famille(name)} to Famille
+	ClassificationCronquist{genre(name)} to Genre
+	ClassificationCronquist{espece(name) required} to Espece
+	// InteractionPlantePlante
+	InteractionPlantePlante{dePlante required} to Plante
+	InteractionPlantePlante{versPlante required} to Plante
+	// All "enum" entity relationship
+	Plante{strate} to Strate
+	Plante{vitesseCroissance} to VitesseCroissance
+	Plante{ensoleillement} to Ensoleillement
+	Plante{richesseSol} to RichesseSol
+	Plante{typeTerre} to TypeTerre
+	Plante{typeFeuillage} to TypeFeuillage
+	Plante{typeRacine} to TypeRacine
+	// Récolte et flo
+	Recolte{plante} to Plante
+	Recolte{mois} to Mois
+	Floraison{plante} to Plante
+	Floraison{mois} to Mois
+}
+relationship OneToMany {
+	// Récolte et flo
+	// Plante to Recolte{plante}
+	// Mois to Recolte{mois}
+	// Plante to Floraison{plante}
+	// Mois to Floraison{mois}
+}
+entity Strate {
+	strate String
+}
+entity VitesseCroissance {
+	vitesseCroissance String
+}
+entity Ensoleillement {
+	ensoleillement String
+}
+entity RichesseSol {
+	richesseSol String
+}
+entity TypeTerre {
+	typeTerre String
+}
+entity TypeFeuillage {
+	typeFeuillage String
+}
+entity TypeRacine {
+	typeRacine String
+}
+
+// Set pagination options
+paginate * with pagination
+
+// Set service options to all except few
+service * with serviceImpl
+
+// In order to rest filtering
+filter *
+dto * with mapstruct
+
+//angularSuffix * with mySuffix
+//microservice * with backend
