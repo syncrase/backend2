@@ -1,17 +1,25 @@
 package fr.olympp.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Objects;
+import java.util.Set;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 
-import javax.persistence.*;
-import javax.validation.constraints.*;
-
-import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
  * A InteractionPlantePlante.
@@ -22,6 +30,13 @@ import java.util.Objects;
 public class InteractionPlantePlante implements Serializable {
 
     private static final long serialVersionUID = 1L;
+
+	public static final String NEGATIF = "-";
+
+	public static final String NEUTRE = "0";
+
+	public static final String POSITIF = "+";
+	
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
