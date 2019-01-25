@@ -123,13 +123,13 @@ relationship ManyToOne {
 	Floraison{plante} to Plante
 	Floraison{mois} to Mois
 }
-relationship OneToMany {
+//relationship OneToMany {
 	// Récolte et flo
 	// Plante to Recolte{plante}
 	// Mois to Recolte{mois}
 	// Plante to Floraison{plante}
 	// Mois to Floraison{mois}
-}
+//}
 entity Strate {
 	strate String
 }
