@@ -1,0 +1,20 @@
+{
+    "name": "Strate",
+    "fields": [
+        {
+            "fieldName": "strate",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190125083052",
+    "entityTableName": "strate",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "backend2",
+    "applications": "*",
+    "microserviceName": "backend2"
+}

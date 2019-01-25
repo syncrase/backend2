@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Reference.
+    -->
+    <changeSet id="20190125083049-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="livre_id"
+                                 baseTableName="reference"
+                                 constraintName="fk_reference_livre_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="livre"/>
+
+        <addForeignKeyConstraint baseColumnNames="page_web_id"
+                                 baseTableName="reference"
+                                 constraintName="fk_reference_page_web_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="page_web"/>
+
+        <addForeignKeyConstraint baseColumnNames="interaction_plante_plante_id"
+                                 baseTableName="reference"
+                                 constraintName="fk_reference_interaction_plante_plante_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="interaction_plante_plante"/>
+
+    </changeSet>
+</databaseChangeLog>

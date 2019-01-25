@@ -1,0 +1,41 @@
+{
+    "name": "ClassificationCronquist",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "ordre",
+            "otherEntityName": "ordre",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "famille",
+            "otherEntityName": "famille",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "genre",
+            "otherEntityName": "genre",
+            "otherEntityField": "name"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": "required",
+            "relationshipName": "espece",
+            "otherEntityName": "espece",
+            "otherEntityField": "name"
+        }
+    ],
+    "changelogDate": "20190125083043",
+    "entityTableName": "classification_cronquist",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "backend2",
+    "applications": "*",
+    "microserviceName": "backend2"
+}

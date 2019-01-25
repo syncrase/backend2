@@ -5,6 +5,33 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
 
     <include file="config/liquibase/changelog/00000000000000_initial_schema.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190125083038_added_entity_Plante.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190125083039_added_entity_PlantCommonName.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190125083040_added_entity_Recolte.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190125083041_added_entity_Floraison.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190125083042_added_entity_Mois.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190125083043_added_entity_ClassificationCronquist.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190125083044_added_entity_Ordre.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190125083045_added_entity_Famille.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190125083046_added_entity_Genre.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190125083047_added_entity_Espece.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190125083048_added_entity_InteractionPlantePlante.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190125083049_added_entity_Reference.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190125083050_added_entity_Livre.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190125083051_added_entity_PageWeb.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190125083052_added_entity_Strate.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190125083053_added_entity_VitesseCroissance.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190125083054_added_entity_Ensoleillement.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190125083055_added_entity_RichesseSol.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190125083056_added_entity_TypeTerre.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190125083057_added_entity_TypeFeuillage.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190125083058_added_entity_TypeRacine.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-changelog - JHipster will add liquibase changelogs here -->
+    <include file="config/liquibase/changelog/20190125083038_added_entity_constraints_Plante.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190125083040_added_entity_constraints_Recolte.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190125083041_added_entity_constraints_Floraison.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190125083043_added_entity_constraints_ClassificationCronquist.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190125083048_added_entity_constraints_InteractionPlantePlante.xml" relativeToChangelogFile="false"/>
+    <include file="config/liquibase/changelog/20190125083049_added_entity_constraints_Reference.xml" relativeToChangelogFile="false"/>
     <!-- jhipster-needle-liquibase-add-constraints-changelog - JHipster will add liquibase constraints changelogs here -->
 </databaseChangeLog>

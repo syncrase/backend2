@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Plante.
+    -->
+    <changeSet id="20190125083038-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="classification_cronquist_id"
+                                 baseTableName="plante"
+                                 constraintName="fk_plante_classification_cronquist_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="classification_cronquist"/>
+
+        <addForeignKeyConstraint baseColumnNames="strate_id"
+                                 baseTableName="plante"
+                                 constraintName="fk_plante_strate_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="strate"/>
+
+        <addForeignKeyConstraint baseColumnNames="vitesse_croissance_id"
+                                 baseTableName="plante"
+                                 constraintName="fk_plante_vitesse_croissance_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="vitesse_croissance"/>
+
+        <addForeignKeyConstraint baseColumnNames="ensoleillement_id"
+                                 baseTableName="plante"
+                                 constraintName="fk_plante_ensoleillement_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="ensoleillement"/>
+
+        <addForeignKeyConstraint baseColumnNames="richesse_sol_id"
+                                 baseTableName="plante"
+                                 constraintName="fk_plante_richesse_sol_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="richesse_sol"/>
+
+        <addForeignKeyConstraint baseColumnNames="type_terre_id"
+                                 baseTableName="plante"
+                                 constraintName="fk_plante_type_terre_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="type_terre"/>
+
+        <addForeignKeyConstraint baseColumnNames="type_feuillage_id"
+                                 baseTableName="plante"
+                                 constraintName="fk_plante_type_feuillage_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="type_feuillage"/>
+
+        <addForeignKeyConstraint baseColumnNames="type_racine_id"
+                                 baseTableName="plante"
+                                 constraintName="fk_plante_type_racine_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="type_racine"/>
+
+        <addForeignKeyConstraint baseColumnNames="plantes_id"
+                                 baseTableName="plante_plant_common_name"
+                                 constraintName="fk_plante_plant_common_name_plantes_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="plante"/>
+        <addForeignKeyConstraint baseColumnNames="plant_common_names_id"
+                                 baseTableName="plante_plant_common_name"
+                                 constraintName="fk_plante_plant_common_name_plant_common_names_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="plant_common_name"/>
+        
+    </changeSet>
+</databaseChangeLog>

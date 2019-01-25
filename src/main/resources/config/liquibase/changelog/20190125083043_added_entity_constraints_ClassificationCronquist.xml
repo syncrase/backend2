@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity ClassificationCronquist.
+    -->
+    <changeSet id="20190125083043-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="ordre_id"
+                                 baseTableName="classification_cronquist"
+                                 constraintName="fk_classification_cronquist_ordre_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="ordre"/>
+
+        <addForeignKeyConstraint baseColumnNames="famille_id"
+                                 baseTableName="classification_cronquist"
+                                 constraintName="fk_classification_cronquist_famille_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="famille"/>
+
+        <addForeignKeyConstraint baseColumnNames="genre_id"
+                                 baseTableName="classification_cronquist"
+                                 constraintName="fk_classification_cronquist_genre_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="genre"/>
+
+        <addForeignKeyConstraint baseColumnNames="espece_id"
+                                 baseTableName="classification_cronquist"
+                                 constraintName="fk_classification_cronquist_espece_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="espece"/>
+
+    </changeSet>
+</databaseChangeLog>

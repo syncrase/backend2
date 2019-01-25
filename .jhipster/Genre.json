@@ -1,0 +1,20 @@
+{
+    "name": "Genre",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20190125083046",
+    "entityTableName": "genre",
+    "dto": "mapstruct",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": true,
+    "fluentMethods": true,
+    "clientRootFolder": "backend2",
+    "applications": "*",
+    "microserviceName": "backend2"
+}
