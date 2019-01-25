@@ -1,0 +1,33 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "fr.olympp"
+    },
+    "jhipsterVersion": "5.7.2",
+    "applicationType": "microservice",
+    "baseName": "backend2",
+    "packageName": "fr.olympp",
+    "packageFolder": "fr/olympp",
+    "serverPort": "8081",
+    "authenticationType": "jwt",
+    "cacheProvider": "hazelcast",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": "eureka",
+    "buildTool": "maven",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MTY5MzY0ZmE2MDQ5NGJkOGEyOWQ4Y2E2N2I5NmZmZmI1N2I1MWI0MTQ0Njg1M2VkMjU1MzI5Yzc5YzQ3ZjU4ZDE0Zjk4NjFiYjRjMGJmM2UxNTg0M2FiYjVjODZhY2IwZjQ1Y2U2MTQ3YTA3ZjczNTFkNGVjMmM1YmE0Y2QyZjk=",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "otherModules": [],
+    "enableTranslation": false,
+    "clientPackageManager": "npm",
+    "skipClient": true,
+    "skipUserManagement": true
+  }
+}
